@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   return {
     title: `Blog - ${slug.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())}`,
-    description: "Expert insights and advice from CA Minakshi Verma & Associates.",
+    description: "Expert insights and advice from TaxVolca.",
   }
 }
 

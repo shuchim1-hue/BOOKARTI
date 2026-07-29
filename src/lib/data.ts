@@ -1,9 +1,9 @@
 export const brand = {
-  name: "TaxVolca®",
+  name: "TaxVolca",
   tagline: "Global Tax, Legal & Business Advisory",
   promise: "Where Compliance Meets Growth.",
   mission: "To simplify taxation, legal compliance, finance, and corporate governance for businesses globally through technology, AI, and world-class advisory.",
-  year: 2015,
+  year: 2018,
 }
 
 export const whatsapp = "918288855262"
@@ -232,7 +232,7 @@ export const blogPosts = [
 ]
 
 export const teamMembers = [
-  { name: "CA Minakshi Verma", role: "Founder & Group CEO", qualifications: "FCA, CPA Australia", image: "/team/minakshi.jpg", bio: "15+ years of global tax and corporate advisory experience. Visionary behind TaxVolca's AI-powered compliance platform." },
+  { name: "Founder & Leadership", role: "Group CEO", qualifications: "FCA, CPA Australia", image: "/team/default.jpg", bio: "Visionary leadership behind TaxVolca's AI-powered global compliance platform." },
   { name: "Adv. Rajesh Sharma", role: "Head of Legal", qualifications: "LLB, LLM (Corporate Law)", image: "/team/rajesh.jpg", bio: "Corporate law expert specializing in M&A, cross-border transactions, and startup legal ecosystem." },
   { name: "CS Priya Mehta", role: "Director - Compliance", qualifications: "FCS, LLB", image: "/team/priya.jpg", bio: "Governance, ROC compliance, and board advisory specialist with decade of experience." },
   { name: "CA Amit Kapoor", role: "Practice Leader - Tax", qualifications: "CA, DISA (ICAI)", image: "/team/amit.jpg", bio: "International taxation, transfer pricing, and tax litigation expert serving multinational clients." },

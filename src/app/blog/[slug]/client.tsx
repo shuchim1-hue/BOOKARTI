@@ -50,7 +50,7 @@ export default function BlogPostClient() {
               with detailed analysis, expert insights, and practical guidance on {post.category.toLowerCase()} topics.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              At CA Minakshi Verma & Associates, we regularly publish articles to help businesses and individuals
+              At TaxVolca, we regularly publish articles to help businesses and individuals
               stay informed about the latest developments in taxation, compliance, and business advisory.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">

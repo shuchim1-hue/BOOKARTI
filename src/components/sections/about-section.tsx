@@ -26,7 +26,7 @@ export function AboutSection() {
             Your Trusted <span className="gold-gradient">Financial & Legal</span> Partner
           </h2>
           <p className="text-white/70 text-lg leading-relaxed mb-6">
-            Led by <strong className="text-white">CA Minakshi Verma</strong>, a Fellow Chartered Accountant
+            Led by a team of Fellow Chartered Accountants
             and CPA Australia member with 15+ years of experience, our firm combines global expertise
             with local knowledge to serve clients across India and Australia.
           </p>

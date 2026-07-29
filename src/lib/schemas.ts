@@ -1,7 +1,7 @@
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "AccountingService",
-  name: "CA Minakshi Verma & Associates",
+  name: "TaxVolca",
   description: "Indian & Australian Chartered Accountants | Legal | Tax | Corporate Advisory",
   url: "https://caminakshiverma.com",
   logo: "https://caminakshiverma.com/logo.png",
@@ -23,7 +23,7 @@ export const organizationSchema = {
 export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "CA Minakshi Verma & Associates",
+  name: "TaxVolca",
   description: "Chartered Accountants and Legal Consultancy serving Indian and Australian businesses",
   url: "https://caminakshiverma.com",
   telephone: "+91-XXX-XXX-XXXX",
@@ -68,7 +68,7 @@ export function serviceSchema(service: { name: string; description: string }) {
     description: service.description,
     provider: {
       "@type": "AccountingService",
-      name: "CA Minakshi Verma & Associates",
+      name: "TaxVolca",
     },
   }
 }

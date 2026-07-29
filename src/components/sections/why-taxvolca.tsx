@@ -5,7 +5,7 @@ import { motion, useInView, useScroll, useTransform } from "framer-motion"
 import { BookOpen, TrendingUp, Shield, Cpu, Globe, Sparkles } from "lucide-react"
 
 const timeline = [
-  { year: "2015", icon: BookOpen, title: "Traditional CA Firm", desc: "Started with core tax & compliance services in Zirakpur, Punjab." },
+  { year: "2018", icon: BookOpen, title: "Founded", desc: "TaxVolca started with a vision to transform tax & compliance through technology." },
   { year: "2018", icon: TrendingUp, title: "Technology Integration", desc: "Adopted cloud accounting, paperless workflows, and digital compliance tools." },
   { year: "2020", icon: Shield, title: "Automation Era", desc: "Automated tax filings, GST returns, and compliance monitoring systems." },
   { year: "2022", icon: Cpu, title: "Artificial Intelligence", desc: "Launched AI-powered tax assistant, contract review, and compliance checker." },

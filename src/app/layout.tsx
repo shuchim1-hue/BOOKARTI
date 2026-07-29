@@ -10,21 +10,21 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 
 export const metadata: Metadata = {
   title: {
-    default: "TaxVolca® | Global Tax, Legal & Business Advisory",
-    template: "%s | TaxVolca®",
+    default: "TaxVolca | Global Tax, Legal & Business Advisory",
+    template: "%s | TaxVolca",
   },
   description: "AI-powered global tax, legal, audit, and business advisory platform. Serving clients across 25+ countries with enterprise-grade expertise and boutique attention.",
   keywords: ["Tax", "Legal", "Audit", "Business Advisory", "AI Tax", "GST", "Company Registration", "International Tax", "Startup", "NRI", "India", "Australia"],
   openGraph: {
     type: "website",
     locale: "en_IN",
-    siteName: "TaxVolca®",
-    title: "TaxVolca® | Global Tax, Legal & Business Advisory",
+    siteName: "TaxVolca",
+    title: "TaxVolca | Global Tax, Legal & Business Advisory",
     description: "Where Compliance Meets Growth. AI-powered tax, legal, audit & corporate advisory platform.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "TaxVolca®",
+    title: "TaxVolca",
     description: "Global Tax, Legal & Business Advisory",
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large" } },

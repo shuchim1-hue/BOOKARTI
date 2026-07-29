@@ -17,36 +17,23 @@ export function HeroV3() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-[#020617]/40 via-transparent to-[#020617] pointer-events-none" />
 
-      <motion.div style={{ opacity, scale }} className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-          className="mb-4"
-        >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#d4a843]/30 bg-[#d4a843]/5 text-[#d4a843] text-xs font-medium tracking-widest uppercase">
-            <Globe className="w-3 h-3" />
-            Global Tax, Legal & Business Advisory
-          </span>
-        </motion.div>
-
+      <motion.div style={{ opacity, scale }} className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 pt-16">
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
-          className="text-5xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tight mb-4"
+          transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+          className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight mb-2"
         >
           <span className="text-white">TaxVolca</span>
-          <span className="text-[#d4a843]">®</span>
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-          className="text-white/40 text-lg sm:text-xl max-w-2xl mb-8 font-light tracking-wide"
+          transition={{ duration: 0.6, delay: 0.15, ease: [0.25, 0.1, 0.25, 1] }}
+          className="text-white/40 text-sm sm:text-base max-w-xl mb-6 font-light"
         >
-          Where compliance meets growth — global tax, legal, audit & business advisory powered by AI and world-class expertise.
+          Global Tax, Legal & Business Advisory
         </motion.p>
 
         <motion.div
