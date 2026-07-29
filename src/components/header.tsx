@@ -1,31 +1,36 @@
 "use client"
 
-import { firmName } from "@/lib/data"
+import { Button } from "@/components/ui/button"
+import { brand, navigation } from "@/lib/data"
 import { cn } from "@/lib/utils"
 import { motion, useScroll, useMotionValueEvent } from "framer-motion"
-import { Menu, X } from "lucide-react"
+import { Menu, Moon, Sun, X } from "lucide-react"
+import { useTheme } from "next-themes"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { useState } from "react"
-import { Button } from "./ui/button"
+import { useEffect, useState } from "react"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [mounted, setMounted] = useState(false)
   const pathname = usePathname()
   const { scrollY } = useScroll()
+  const { theme, setTheme } = useTheme()
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setScrolled(latest > 20)
   })
+
+  useEffect(() => setMounted(true), [])
 
   return (
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         scrolled
-          ? "bg-white/95 dark:bg-primary/95 backdrop-blur-xl shadow-lg"
+          ? "bg-white/90 dark:bg-[#0f172a]/90 backdrop-blur-xl shadow-lg border-b border-border/50"
           : "bg-transparent",
       )}
     >
@@ -34,30 +39,23 @@ export function Header() {
           <Link href="/" className="flex items-center gap-3 group">
             <Image
               src="/logo.svg"
-              alt={firmName}
+              alt={brand.name}
               width={44}
               height={44}
               className="w-11 h-11 object-contain transition-transform group-hover:scale-110"
             />
             <div className="hidden sm:block">
               <span className="text-sm font-bold tracking-tight block leading-tight">
-                {firmName}
+                {brand.name}
               </span>
               <span className="text-[10px] text-accent font-medium tracking-widest uppercase">
-                Chartered Accountants
+                {brand.tagline}
               </span>
             </div>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">
-            {[
-              { label: "Home", href: "/" },
-              { label: "About", href: "/about" },
-              { label: "Services", href: "/services" },
-              { label: "AI Tools", href: "/ai-tools" },
-              { label: "FAQ", href: "/faq" },
-              { label: "Contact", href: "/contact" },
-            ].map((item) => (
+            {navigation.main.slice(0, 7).map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -73,9 +71,18 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
+            {mounted && (
+              <button
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                className="p-2 rounded-lg hover:bg-accent/10 transition-colors"
+                aria-label="Toggle theme"
+              >
+                {theme === "dark" ? <Sun className="w-5 h-5 text-accent" /> : <Moon className="w-5 h-5" />}
+              </button>
+            )}
             <Button asChild size="sm" className="hidden md:inline-flex">
-              <Link href="/appointment">Book Appointment</Link>
+              <Link href="/contact">Book Consultation</Link>
             </Button>
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -96,19 +103,7 @@ export function Header() {
           className="lg:hidden border-t border-border bg-background shadow-xl"
         >
           <div className="max-w-7xl mx-auto px-4 py-4 space-y-1">
-            {[
-              { label: "Home", href: "/" },
-              { label: "About Us", href: "/about" },
-              { label: "Services", href: "/services" },
-              { label: "Industries", href: "/industries" },
-              { label: "India", href: "/india" },
-              { label: "Australia", href: "/australia" },
-              { label: "AI Tools", href: "/ai-tools" },
-              { label: "FAQ", href: "/faq" },
-              { label: "Blog", href: "/blog" },
-              { label: "Appointment", href: "/appointment" },
-              { label: "Contact", href: "/contact" },
-            ].map((item) => (
+            {navigation.main.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -124,9 +119,7 @@ export function Header() {
               </Link>
             ))}
             <Button asChild className="w-full mt-4">
-              <Link href="/appointment" onClick={() => setIsOpen(false)}>
-                Book Appointment
-              </Link>
+              <Link href="/contact" onClick={() => setIsOpen(false)}>Book Consultation</Link>
             </Button>
           </div>
         </motion.div>

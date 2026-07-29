@@ -2,8 +2,8 @@ import type { Metadata } from "next"
 import AboutPageClient from "./client"
 
 export const metadata: Metadata = {
-  title: "About Us",
-  description: "Meet CA Minakshi Verma and our team of Chartered Accountants, Corporate Lawyers, and Tax Experts. Learn about our mission, vision, and values.",
+  title: "About TaxVolca",
+  description: "Learn about TaxVolca's mission, leadership, global presence, and technology-driven approach to tax, legal, and business advisory.",
 }
 
 export default function AboutPage() {

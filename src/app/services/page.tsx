@@ -3,7 +3,7 @@ import ServicesPageClient from "./client"
 
 export const metadata: Metadata = {
   title: "Services",
-  description: "Complete range of accounting, taxation, GST, audit, corporate, legal, and advisory services for businesses in India and Australia.",
+  description: "TaxVolca's six specialized divisions: Tax, Audit, Legal, Capital, Global, and AI-powered solutions for businesses worldwide.",
 }
 
 export default function ServicesPage() {

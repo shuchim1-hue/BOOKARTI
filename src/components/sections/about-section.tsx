@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
-import { firmName, industries, testimonials } from "@/lib/data"
+import { brand, navigation, testimonials } from "@/lib/data"
 import { motion } from "framer-motion"
 import { ArrowRight, Award, CheckCircle, Quote, Star } from "lucide-react"
 import Link from "next/link"
@@ -21,7 +21,7 @@ export function AboutSection() {
     <SectionWrapper id="about" dark>
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
         <div>
-          <Badge variant="gold" className="mb-4">About {firmName}</Badge>
+          <Badge variant="gold" className="mb-4">About {brand.name}</Badge>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
             Your Trusted <span className="gold-gradient">Financial & Legal</span> Partner
           </h2>
@@ -70,7 +70,7 @@ export function AboutSection() {
       <div className="mb-16">
         <SectionHeader title="Industries We Serve" subtitle="Deep domain expertise across diverse sectors" gold />
         <div className="flex flex-wrap justify-center gap-3">
-          {industries.map((industry) => (
+          {navigation.megaMenu.industries.map((industry) => (
             <Badge
               key={industry}
               variant="gold"
