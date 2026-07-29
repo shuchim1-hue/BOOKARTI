@@ -45,7 +45,7 @@ export function Header() {
               className="w-11 h-11 object-contain transition-transform group-hover:scale-110"
             />
             <div className="hidden sm:block">
-              <span className="text-sm font-bold tracking-tight block leading-tight">
+              <span className="text-sm font-bold tracking-tight block leading-tight text-zinc-900 dark:text-white">
                 {brand.name}
               </span>
               <span className="text-[10px] text-accent font-medium tracking-widest uppercase">

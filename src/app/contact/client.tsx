@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { address, email, phone, phoneAus, whatsapp } from "@/lib/data"
+import { address, email, phone, whatsapp } from "@/lib/data"
 import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react"
 import { useState } from "react"
 
@@ -21,7 +21,7 @@ export default function ContactPageClient() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
             <span className="gold-gradient">Contact</span> TaxVolca
           </h1>
-          <p className="text-lg text-white/60 max-w-2xl">Three offices. Three continents. One global team ready to help.</p>
+          <p className="text-lg text-white/60 max-w-2xl">One team ready to help with your global tax and business needs.</p>
         </div>
       </section>
 
@@ -29,7 +29,7 @@ export default function ContactPageClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-6 mb-12">
             {[
-              { icon: <Phone className="w-6 h-6" />, title: "Phone", value: phone, sub: `Australia: ${phoneAus}` },
+              { icon: <Phone className="w-6 h-6" />, title: "Phone", value: phone, sub: "Mon-Sat: 9:00 AM - 7:00 PM IST" },
               { icon: <MessageCircle className="w-6 h-6" />, title: "WhatsApp", value: `+${whatsapp}`, sub: "Quick response within minutes" },
               { icon: <Mail className="w-6 h-6" />, title: "Email", value: email, sub: "We respond within 24 hours" },
             ].map((item) => (

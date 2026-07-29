@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { address, brand, email, phone, phoneAus, stats, whatsapp } from "@/lib/data"
+import { address, brand, email, phone, stats, whatsapp } from "@/lib/data"
 import { ExternalLink, Globe, Mail, MapPin, MessageCircle, Phone } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -74,7 +74,7 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/10 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-white/40">
+        <div className="mt-12 pt-8 border-t border-white/10 grid grid-cols-1 gap-6 text-sm text-white/40">
           {Object.values(address).map((addr) => (
             <div key={addr.name} className="flex items-start gap-2">
               <MapPin className="w-4 h-4 text-accent mt-0.5 shrink-0" />
@@ -88,7 +88,7 @@ export function Footer() {
         </div>
 
         <div className="mt-6 flex flex-wrap gap-4 text-sm text-white/40">
-          <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-accent shrink-0" />{phone} | {phoneAus}</div>
+          <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-accent shrink-0" />{phone}</div>
           <div className="flex items-center gap-2"><Mail className="w-4 h-4 text-accent shrink-0" />{email}</div>
           <div className="flex items-center gap-2"><MessageCircle className="w-4 h-4 text-accent shrink-0" />WhatsApp: +{whatsapp}</div>
         </div>

@@ -58,7 +58,7 @@ export default function AboutPageClient() {
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Our team of 100+ experts — Chartered Accountants, Company Secretaries, Corporate Lawyers,
-              AI Engineers, and Business Strategists — works seamlessly across offices in India, Australia,
+              AI Engineers, and Business Strategists — works seamlessly from our India headquarters and
               and the UAE to deliver integrated solutions.
             </p>
             <p className="text-muted-foreground leading-relaxed">

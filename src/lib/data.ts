@@ -6,9 +6,9 @@ export const brand = {
   year: 2015,
 }
 
-export const whatsapp = "918146252252"
-export const phone = "+91-8146-252-252"
-export const phoneAus = "+61-XXX-XXX-XXX"
+export const whatsapp = "918288855262"
+export const phone = "+91-8288855262"
+export const phoneAus = ""
 export const email = "hello@taxvolca.com"
 export const emailCareers = "careers@taxvolca.com"
 
@@ -25,25 +25,7 @@ export const address = {
     phone: "+91-8146-252-252",
     hours: "Mon-Sat: 9:00 AM - 7:00 PM IST",
   },
-  australia: {
-    name: "Australia Office",
-    line1: "[Level, Street]",
-    city: "[City]",
-    state: "[State]",
-    country: "Australia",
-    full: "[Level, Street], [City], [State], Australia",
-    phone: "+61-XXX-XXX-XXX",
-    hours: "Mon-Fri: 9:00 AM - 5:00 PM AEST",
-  },
-  dubai: {
-    name: "Dubai Office",
-    line1: "[Office Address]",
-    city: "Dubai",
-    country: "UAE",
-    full: "[Office Address], Dubai, UAE",
-    phone: "+971-XXX-XXX-XXX",
-    hours: "Sun-Thu: 9:00 AM - 6:00 PM GST",
-  },
+
 }
 
 export const stats = [
