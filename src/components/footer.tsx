@@ -1,10 +1,11 @@
 "use client"
 
-import { firmName, tagline } from "@/lib/data"
-import { ExternalLink, Globe, Mail, MapPin, Phone } from "lucide-react"
+import { addressIndia, addressAustralia, email, firmName, phone, phoneAustralia, tagline, workingHours, whatsapp } from "@/lib/data"
+import { ExternalLink, Globe, Mail, MapPin, MessageCircle, Phone } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link"
 
-const footerLinks = {
+const footerLinks: Record<string, { label: string; href: string }[]> = {
   Services: [
     { label: "Accounting & Bookkeeping", href: "/services" },
     { label: "Taxation & TDS", href: "/services" },
@@ -13,15 +14,21 @@ const footerLinks = {
     { label: "Corporate Services", href: "/services" },
     { label: "ROC Compliance", href: "/services" },
   ],
-  Locations: [
-    { label: "India Office", href: "/india" },
-    { label: "Australia Office", href: "/australia" },
-  ],
-  Resources: [
+  "Quick Links": [
+    { label: "About Us", href: "/about" },
+    { label: "Industries", href: "/industries" },
+    { label: "AI Tax Assistant", href: "/ai-tools" },
     { label: "Blog", href: "/blog" },
     { label: "FAQ", href: "/faq" },
     { label: "Contact", href: "/contact" },
+  ],
+  Resources: [
     { label: "Client Portal", href: "/client-portal" },
+    { label: "Book Appointment", href: "/appointment" },
+    { label: "India Services", href: "/india" },
+    { label: "Australia Services", href: "/australia" },
+    { label: "Admin Dashboard", href: "/admin" },
+    { label: "Privacy Policy", href: "#" },
   ],
 }
 
@@ -33,9 +40,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center font-bold text-primary text-lg">
-                CMV
-              </div>
+              <Image
+                src="/logo.svg"
+                alt={firmName}
+                width={48}
+                height={48}
+                className="w-12 h-12"
+              />
               <div>
                 <h3 className="font-bold text-lg">{firmName}</h3>
                 <p className="text-xs text-accent/80">{tagline}</p>
@@ -43,7 +54,8 @@ export function Footer() {
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-6 max-w-md">
               A premier Chartered Accountancy and Legal Consultancy firm, providing
-              comprehensive business solutions to clients across India and Australia.
+              comprehensive business solutions to clients across India and Australia
+              with a perfect blend of global expertise and personalized service.
             </p>
             <div className="flex gap-3">
               {[Globe, ExternalLink, Globe, ExternalLink].map((Icon, i) => (
@@ -80,17 +92,35 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/10 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-white/40">
-          <div className="flex items-center gap-2">
-            <Phone className="w-4 h-4 text-accent" />
-            <span>+91-XXX-XXX-XXXX | +61-XXX-XXX-XXX</span>
+          <div className="flex items-start gap-2">
+            <MapPin className="w-4 h-4 text-accent mt-0.5 shrink-0" />
+            <div>
+              <p className="font-medium text-white/60">India Office</p>
+              <p>{addressIndia.full}</p>
+              <p className="text-xs mt-1">{workingHours.india}</p>
+            </div>
           </div>
-          <div className="flex items-center gap-2">
-            <Mail className="w-4 h-4 text-accent" />
-            <span>info@caminakshiverma.com</span>
+          <div className="flex items-start gap-2">
+            <MapPin className="w-4 h-4 text-accent mt-0.5 shrink-0" />
+            <div>
+              <p className="font-medium text-white/60">Australia Office</p>
+              <p>{addressAustralia.full}</p>
+              <p className="text-xs mt-1">{workingHours.australia}</p>
+            </div>
           </div>
-          <div className="flex items-center gap-2">
-            <MapPin className="w-4 h-4 text-accent" />
-            <span>India | Australia</span>
+          <div className="space-y-2">
+            <div className="flex items-center gap-2">
+              <Phone className="w-4 h-4 text-accent shrink-0" />
+              <span>{phone} | {phoneAustralia}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Mail className="w-4 h-4 text-accent shrink-0" />
+              <span>{email}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <MessageCircle className="w-4 h-4 text-accent shrink-0" />
+              <span>WhatsApp: +{whatsapp}</span>
+            </div>
           </div>
         </div>
 
@@ -100,6 +130,7 @@ export function Footer() {
             <Link href="#" className="hover:text-accent transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-accent transition-colors">Terms of Service</Link>
             <Link href="#" className="hover:text-accent transition-colors">Disclaimer</Link>
+            <Link href="#" className="hover:text-accent transition-colors">Sitemap</Link>
           </div>
         </div>
       </div>

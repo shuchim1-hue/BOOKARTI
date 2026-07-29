@@ -5,11 +5,15 @@
   --color-foreground: var(--foreground);
   --color-primary: #0a1628;
   --color-primary-light: #1a2d4a;
+  --color-primary-dark: #050d1a;
   --color-accent: #d4a843;
-  --color-accent-light: #e8c46a;
+  --color-accent-light: #f0d685;
+  --color-accent-dark: #b8922e;
   --color-muted: #f8f9fc;
   --color-muted-foreground: #6b7280;
   --color-border: #e5e7eb;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -49,9 +53,15 @@ body {
   to { opacity: 1; transform: scale(1); }
 }
 
-@keyframes countUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .animate-float {
@@ -72,6 +82,15 @@ body {
   animation: scaleIn 0.5s ease-out forwards;
 }
 
+.animate-pulse-gold {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientMove 4s ease infinite;
+}
+
 .glass {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
@@ -84,11 +103,21 @@ body {
   border: 1px solid rgba(212, 168, 67, 0.1);
 }
 
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
 .gold-gradient {
   background: linear-gradient(135deg, #d4a843, #f0d685, #d4a843);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.gold-gradient-solid {
+  background: linear-gradient(135deg, #d4a843, #f0d685, #d4a843);
 }
 
 .text-gradient {
@@ -100,6 +129,12 @@ body {
 
 .hero-gradient {
   background: linear-gradient(135deg, #0a1628 0%, #1a2d4a 50%, #0a1628 100%);
+}
+
+.hero-gradient-animated {
+  background: linear-gradient(270deg, #0a1628, #1a2d4a, #0a1628, #1a2d4a);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
 }
 
 .section-fade {

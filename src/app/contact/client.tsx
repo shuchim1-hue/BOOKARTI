@@ -6,24 +6,27 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
+import { addressAustralia, addressIndia, email, phone, phoneAustralia, whatsapp, workingHours } from "@/lib/data"
 import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
 
 const offices = [
   {
-    city: "India Office",
-    address: "[City], [State], India",
-    phone: "+91-XXX-XXX-XXXX",
-    email: "india@caminakshiverma.com",
-    hours: "Mon-Sat: 9:00 AM - 7:00 PM",
+    city: "India Office - Zirakpur",
+    address: addressIndia.full,
+    phone: phone,
+    email: email,
+    hours: workingHours.india,
+    map: "#90, Dikshant School Road, VIP Road, Zirakpur, Punjab 140603",
   },
   {
     city: "Australia Office",
-    address: "[City], [State], Australia",
-    phone: "+61-XXX-XXX-XXX",
-    email: "australia@caminakshiverma.com",
-    hours: "Mon-Fri: 9:00 AM - 5:00 PM AEST",
+    address: addressAustralia.full,
+    phone: phoneAustralia,
+    email: email,
+    hours: workingHours.australia,
+    map: addressAustralia.full,
   },
 ]
 
@@ -46,7 +49,7 @@ export default function ContactPageClient() {
               <span className="gold-gradient">Contact</span> Us
             </h1>
             <p className="text-xl text-white/70">
-              We&apos;d love to hear from you. Reach out through any of the channels below.
+              Visit our office in Zirakpur or reach out through any of the channels below.
             </p>
           </div>
         </div>
@@ -56,9 +59,9 @@ export default function ContactPageClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-8 mb-12">
             {[
-              { icon: <Phone className="w-6 h-6" />, title: "Phone", value: "+91-XXX-XXX-XXXX", sub: "Emergency: +91-XXX-XXX-XXXX" },
-              { icon: <Mail className="w-6 h-6" />, title: "Email", value: "info@caminakshiverma.com", sub: "We respond within 24 hours" },
-              { icon: <MessageCircle className="w-6 h-6" />, title: "WhatsApp", value: "+91-XXX-XXX-XXXX", sub: "Quick response on chat" },
+              { icon: <Phone className="w-6 h-6" />, title: "Phone", value: phone, sub: `Australia: ${phoneAustralia}` },
+              { icon: <MessageCircle className="w-6 h-6" />, title: "WhatsApp", value: `+${whatsapp}`, sub: "Quick response within minutes" },
+              { icon: <Mail className="w-6 h-6" />, title: "Email", value: email, sub: "We respond within 24 hours" },
             ].map((item) => (
               <Card key={item.title} variant="hover">
                 <CardContent className="p-6 flex items-start gap-4">
@@ -80,8 +83,8 @@ export default function ContactPageClient() {
               <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
               {submitted ? (
                 <div className="bg-accent/10 rounded-xl p-8 text-center">
-                  <p className="text-lg font-semibold text-accent mb-2">Message Sent!</p>
-                  <p className="text-muted-foreground">We&apos;ll get back to you within 24 hours.</p>
+                  <p className="text-lg font-semibold text-accent mb-2">Message Sent Successfully!</p>
+                  <p className="text-muted-foreground">We&apos;ll get back to you within 24 hours. For urgent matters, please WhatsApp us.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
@@ -97,15 +100,15 @@ export default function ContactPageClient() {
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="phone">Phone</Label>
-                    <Input id="phone" type="tel" placeholder="+91-XXXXXXXXXX" />
+                    <Input id="phone" type="tel" placeholder={phone} />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="subject">Subject</Label>
-                    <Input id="subject" placeholder="How can we help?" />
+                    <Input id="subject" placeholder="How can we help you?" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="message">Message *</Label>
-                    <Textarea id="message" placeholder="Tell us about your requirement..." required />
+                    <Textarea id="message" placeholder="Tell us about your requirement in detail..." required />
                   </div>
                   <Button type="submit" className="w-full" size="lg">
                     Send Message
@@ -120,7 +123,7 @@ export default function ContactPageClient() {
                 <Card key={office.city}>
                   <CardContent className="p-6">
                     <h3 className="font-bold text-lg mb-3">{office.city}</h3>
-                    <div className="space-y-2 text-sm text-muted-foreground">
+                    <div className="space-y-3 text-sm text-muted-foreground">
                       <p className="flex items-start gap-2">
                         <MapPin className="w-4 h-4 text-accent mt-0.5 shrink-0" />
                         {office.address}
@@ -138,13 +141,25 @@ export default function ContactPageClient() {
                         {office.hours}
                       </p>
                     </div>
+                    <div className="mt-4 pt-3 border-t border-border">
+                      <a
+                        href={`https://maps.google.com/?q=${encodeURIComponent(office.map)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-accent text-sm font-medium hover:underline flex items-center gap-1"
+                      >
+                        <MapPin className="w-4 h-4" />
+                        View on Google Maps
+                      </a>
+                    </div>
                   </CardContent>
                 </Card>
               ))}
 
-              <div className="aspect-[16/9] rounded-xl bg-muted flex items-center justify-center">
-                <MapPin className="w-8 h-8 text-accent" />
-                <span className="ml-2 text-muted-foreground">Interactive Map</span>
+              <div className="aspect-[16/9] rounded-xl bg-gradient-to-br from-accent/10 to-primary/10 flex flex-col items-center justify-center border border-border">
+                <MapPin className="w-10 h-10 text-accent mb-2" />
+                <span className="text-muted-foreground text-sm font-medium">Interactive Map Coming Soon</span>
+                <span className="text-xs text-muted-foreground mt-1">#90, Dikshant School Road, VIP Road, Zirakpur</span>
               </div>
             </div>
           </div>
