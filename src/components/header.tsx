@@ -29,7 +29,9 @@ export function Header() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-        "bg-white/90 dark:bg-[#0f172a]/90 backdrop-blur-xl shadow-lg border-b border-border/50",
+        scrolled
+          ? "bg-white/90 dark:bg-[#0f172a]/90 backdrop-blur-xl shadow-lg border-b border-border/50"
+          : "bg-transparent",
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -78,7 +80,7 @@ export function Header() {
                 className="p-2 rounded-lg hover:bg-accent/10 transition-colors"
                 aria-label="Toggle theme"
               >
-                {theme === "dark" ? <Sun className="w-5 h-5 text-accent" /> : <Moon className="w-5 h-5" />}
+                {theme === "dark" ? <Sun className="w-5 h-5 text-accent" /> : <Moon className={cn("w-5 h-5", scrolled ? "" : "text-white")} />}
               </button>
             )}
             <Button asChild size="sm" className="hidden md:inline-flex">
@@ -89,7 +91,7 @@ export function Header() {
               className="lg:hidden p-2 rounded-lg hover:bg-accent/10 transition-colors"
               aria-label="Toggle menu"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className={cn("w-6 h-6", scrolled ? "" : "text-white")} /> : <Menu className={cn("w-6 h-6", scrolled ? "" : "text-white")} />}
             </button>
           </div>
         </div>
