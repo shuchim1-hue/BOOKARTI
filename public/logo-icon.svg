@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" role="img" aria-label="TaxVolca icon">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" role="img" aria-label="TaxVolca AI icon">
   <defs>
     <linearGradient id="goldGrad" x1="0" y1="1" x2="0" y2="0">
       <stop offset="0%" stop-color="#D4AF37"/>
@@ -10,47 +10,73 @@
     </linearGradient>
   </defs>
 
-  <!-- Outer hexagon frame -->
-  <path d="M50 6 L84 24 L84 76 L50 94 L16 76 L16 24 Z" stroke="currentColor" stroke-width="1.2" fill="none" opacity="0.3"/>
+  <!-- Neural network connection lines - left side -->
+  <path d="M25 16 L18 45 M25 16 L35 30 M25 16 L50 48" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.35"/>
+  <path d="M18 45 L35 30 M18 45 L50 48 M18 45 L32 75" stroke="url(#goldGrad)" stroke-width="0.6" opacity="0.4"/>
+  <path d="M35 30 L50 48 M35 30 L32 75" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.3"/>
 
-  <!-- Inner hexagon frame -->
-  <path d="M50 14 L76 28 L76 72 L50 86 L24 72 L24 28 Z" stroke="currentColor" stroke-width="0.6" fill="none" opacity="0.15"/>
+  <!-- Neural network connection lines - right side -->
+  <path d="M75 16 L82 45 M75 16 L65 30 M75 16 L50 48" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.35"/>
+  <path d="M82 45 L65 30 M82 45 L50 48 M82 45 L68 75" stroke="url(#goldGrad)" stroke-width="0.6" opacity="0.4"/>
+  <path d="M65 30 L50 48 M65 30 L68 75" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.3"/>
 
-  <!-- Connector lines: network / AI connectivity -->
-  <path d="M32 32 L18 26 M32 32 L18 74 M68 32 L82 26 M68 32 L82 74 M50 82 L50 94" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
+  <!-- Cross connections (neural mesh) -->
+  <path d="M25 16 L65 30 M35 30 L75 16" stroke="url(#emeraldGrad)" stroke-width="0.4" opacity="0.25" stroke-dasharray="2 2"/>
+  <path d="M18 45 L68 75 M82 45 L32 75" stroke="url(#emeraldGrad)" stroke-width="0.4" opacity="0.2" stroke-dasharray="1.5 1.5"/>
+  <path d="M25 16 L82 45 M75 16 L18 45" stroke="url(#emeraldGrad)" stroke-width="0.3" opacity="0.15" stroke-dasharray="1 2"/>
 
-  <!-- Upward growth antenna -->
-  <path d="M50 32 L50 10" stroke="url(#goldGrad)" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  <!-- Central hub connections -->
+  <path d="M50 48 L32 75 M50 48 L68 75 M50 48 L50 88" stroke="url(#goldGrad)" stroke-width="0.8" opacity="0.5"/>
+  <path d="M50 48 L35 30 M50 48 L65 30" stroke="url(#emeraldGrad)" stroke-width="0.6" opacity="0.35"/>
 
-  <!-- Left arm of V -->
-  <path d="M50 84 L32 34" stroke="url(#goldGrad)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- V-apex connections -->
+  <path d="M32 75 L50 88 M68 75 L50 88" stroke="url(#goldGrad)" stroke-width="0.7" opacity="0.45"/>
+  <path d="M32 75 L68 75" stroke="url(#emeraldGrad)" stroke-width="0.4" opacity="0.2" stroke-dasharray="2 2"/>
 
-  <!-- Right arm of V -->
-  <path d="M50 84 L68 34" stroke="url(#goldGrad)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Upward signal line -->
+  <path d="M50 48 L50 10" stroke="url(#goldGrad)" stroke-width="0.6" opacity="0.4" stroke-dasharray="2 2"/>
 
-  <!-- Globe latitude arc (emerald) -->
-  <path d="M14 60 Q50 76 86 60" stroke="url(#emeraldGrad)" stroke-width="1" fill="none" opacity="0.5"/>
+  <!-- Nodes (neurons) -->
+  <!-- Top-left neuron -->
+  <circle cx="25" cy="16" r="3.5" fill="url(#goldGrad)"/>
+  <circle cx="25" cy="16" r="5" fill="url(#goldGrad)" opacity="0.15"/>
 
-  <!-- Globe longitude arc (emerald) -->
-  <path d="M50 94 Q64 65 50 14" stroke="url(#emeraldGrad)" stroke-width="0.6" fill="none" opacity="0.3"/>
+  <!-- Top-right neuron -->
+  <circle cx="75" cy="16" r="3.5" fill="url(#goldGrad)"/>
+  <circle cx="75" cy="16" r="5" fill="url(#goldGrad)" opacity="0.15"/>
 
-  <!-- Bottom node -->
-  <circle cx="50" cy="84" r="3" fill="url(#goldGrad)"/>
+  <!-- Mid-left neuron -->
+  <circle cx="18" cy="45" r="4" fill="url(#goldGrad)"/>
+  <circle cx="18" cy="45" r="6" fill="url(#goldGrad)" opacity="0.12"/>
 
-  <!-- Left node -->
-  <circle cx="32" cy="34" r="2.5" fill="url(#goldGrad)"/>
+  <!-- Mid-right neuron -->
+  <circle cx="82" cy="45" r="4" fill="url(#goldGrad)"/>
+  <circle cx="82" cy="45" r="6" fill="url(#goldGrad)" opacity="0.12"/>
 
-  <!-- Right node -->
-  <circle cx="68" cy="34" r="2.5" fill="url(#goldGrad)"/>
+  <!-- Inner-left neuron -->
+  <circle cx="35" cy="30" r="2.5" fill="url(#emeraldGrad)"/>
 
-  <!-- Top node -->
+  <!-- Inner-right neuron -->
+  <circle cx="65" cy="30" r="2.5" fill="url(#emeraldGrad)"/>
+
+  <!-- Bottom-left neuron -->
+  <circle cx="32" cy="75" r="4.5" fill="url(#goldGrad)"/>
+  <circle cx="32" cy="75" r="6.5" fill="url(#goldGrad)" opacity="0.1"/>
+
+  <!-- Bottom-right neuron -->
+  <circle cx="68" cy="75" r="4.5" fill="url(#goldGrad)"/>
+  <circle cx="68" cy="75" r="6.5" fill="url(#goldGrad)" opacity="0.1"/>
+
+  <!-- Center hub neuron -->
+  <circle cx="50" cy="48" r="5" fill="url(#emeraldGrad)"/>
+  <circle cx="50" cy="48" r="8" fill="url(#emeraldGrad)" opacity="0.1"/>
+  <circle cx="50" cy="48" r="12" fill="url(#emeraldGrad)" opacity="0.05"/>
+
+  <!-- V-apex neuron -->
+  <circle cx="50" cy="88" r="5.5" fill="url(#goldGrad)"/>
+  <circle cx="50" cy="88" r="8" fill="url(#goldGrad)" opacity="0.12"/>
+  <circle cx="50" cy="88" r="14" fill="url(#goldGrad)" opacity="0.05"/>
+
+  <!-- Top signal neuron -->
   <circle cx="50" cy="10" r="2" fill="url(#goldGrad)"/>
-
-  <!-- Small decorative dots at hexagon vertices -->
-  <circle cx="50" cy="6" r="1.2" fill="currentColor" opacity="0.2"/>
-  <circle cx="84" cy="24" r="1.2" fill="currentColor" opacity="0.2"/>
-  <circle cx="84" cy="76" r="1.2" fill="currentColor" opacity="0.2"/>
-  <circle cx="50" cy="94" r="1.2" fill="currentColor" opacity="0.2"/>
-  <circle cx="16" cy="76" r="1.2" fill="currentColor" opacity="0.2"/>
-  <circle cx="16" cy="24" r="1.2" fill="currentColor" opacity="0.2"/>
 </svg>

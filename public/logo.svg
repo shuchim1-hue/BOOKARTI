@@ -9,33 +9,44 @@
       <stop offset="100%" stop-color="#34D88A"/>
     </linearGradient>
   </defs>
-
-  <!-- Icon (scaled to 80x80) -->
-  <g transform="translate(5, 15) scale(0.8)">
-    <path d="M50 6 L84 24 L84 76 L50 94 L16 76 L16 24 Z" stroke="currentColor" stroke-width="1.2" fill="none" opacity="0.3"/>
-    <path d="M50 14 L76 28 L76 72 L50 86 L24 72 L24 28 Z" stroke="currentColor" stroke-width="0.6" fill="none" opacity="0.15"/>
-    <path d="M32 32 L18 26 M32 32 L18 74 M68 32 L82 26 M68 32 L82 74 M50 82 L50 94" stroke="currentColor" stroke-width="0.8" opacity="0.25"/>
-    <path d="M50 32 L50 10" stroke="url(#goldGradH)" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
-    <path d="M50 84 L32 34" stroke="url(#goldGradH)" stroke-width="7" stroke-linecap="round"/>
-    <path d="M50 84 L68 34" stroke="url(#goldGradH)" stroke-width="7" stroke-linecap="round"/>
-    <path d="M14 60 Q50 76 86 60" stroke="url(#emeraldGradH)" stroke-width="1" fill="none" opacity="0.5"/>
-    <path d="M50 94 Q64 65 50 14" stroke="url(#emeraldGradH)" stroke-width="0.6" fill="none" opacity="0.3"/>
-    <circle cx="50" cy="84" r="3" fill="url(#goldGradH)"/>
-    <circle cx="32" cy="34" r="2.5" fill="url(#goldGradH)"/>
-    <circle cx="68" cy="34" r="2.5" fill="url(#goldGradH)"/>
+  <g transform="translate(10, 18) scale(0.74)">
+    <path d="M25 16 L18 45 M25 16 L35 30 M25 16 L50 48" stroke="url(#goldGradH)" stroke-width="0.5" opacity="0.35"/>
+    <path d="M18 45 L35 30 M18 45 L50 48 M18 45 L32 75" stroke="url(#goldGradH)" stroke-width="0.6" opacity="0.4"/>
+    <path d="M35 30 L50 48 M35 30 L32 75" stroke="url(#goldGradH)" stroke-width="0.5" opacity="0.3"/>
+    <path d="M75 16 L82 45 M75 16 L65 30 M75 16 L50 48" stroke="url(#goldGradH)" stroke-width="0.5" opacity="0.35"/>
+    <path d="M82 45 L65 30 M82 45 L50 48 M82 45 L68 75" stroke="url(#goldGradH)" stroke-width="0.6" opacity="0.4"/>
+    <path d="M65 30 L50 48 M65 30 L68 75" stroke="url(#goldGradH)" stroke-width="0.5" opacity="0.3"/>
+    <path d="M25 16 L65 30 M35 30 L75 16" stroke="url(#emeraldGradH)" stroke-width="0.4" opacity="0.25" stroke-dasharray="2 2"/>
+    <path d="M18 45 L68 75 M82 45 L32 75" stroke="url(#emeraldGradH)" stroke-width="0.4" opacity="0.2" stroke-dasharray="1.5 1.5"/>
+    <path d="M25 16 L82 45 M75 16 L18 45" stroke="url(#emeraldGradH)" stroke-width="0.3" opacity="0.15" stroke-dasharray="1 2"/>
+    <path d="M50 48 L32 75 M50 48 L68 75 M50 48 L50 88" stroke="url(#goldGradH)" stroke-width="0.8" opacity="0.5"/>
+    <path d="M50 48 L35 30 M50 48 L65 30" stroke="url(#emeraldGradH)" stroke-width="0.6" opacity="0.35"/>
+    <path d="M32 75 L50 88 M68 75 L50 88" stroke="url(#goldGradH)" stroke-width="0.7" opacity="0.45"/>
+    <path d="M32 75 L68 75" stroke="url(#emeraldGradH)" stroke-width="0.4" opacity="0.2" stroke-dasharray="2 2"/>
+    <path d="M50 48 L50 10" stroke="url(#goldGradH)" stroke-width="0.6" opacity="0.4" stroke-dasharray="2 2"/>
+    <circle cx="25" cy="16" r="3.5" fill="url(#goldGradH)"/>
+    <circle cx="25" cy="16" r="5" fill="url(#goldGradH)" opacity="0.15"/>
+    <circle cx="75" cy="16" r="3.5" fill="url(#goldGradH)"/>
+    <circle cx="75" cy="16" r="5" fill="url(#goldGradH)" opacity="0.15"/>
+    <circle cx="18" cy="45" r="4" fill="url(#goldGradH)"/>
+    <circle cx="18" cy="45" r="6" fill="url(#goldGradH)" opacity="0.12"/>
+    <circle cx="82" cy="45" r="4" fill="url(#goldGradH)"/>
+    <circle cx="82" cy="45" r="6" fill="url(#goldGradH)" opacity="0.12"/>
+    <circle cx="35" cy="30" r="2.5" fill="url(#emeraldGradH)"/>
+    <circle cx="65" cy="30" r="2.5" fill="url(#emeraldGradH)"/>
+    <circle cx="32" cy="75" r="4.5" fill="url(#goldGradH)"/>
+    <circle cx="32" cy="75" r="6.5" fill="url(#goldGradH)" opacity="0.1"/>
+    <circle cx="68" cy="75" r="4.5" fill="url(#goldGradH)"/>
+    <circle cx="68" cy="75" r="6.5" fill="url(#goldGradH)" opacity="0.1"/>
+    <circle cx="50" cy="48" r="5" fill="url(#emeraldGradH)"/>
+    <circle cx="50" cy="48" r="8" fill="url(#emeraldGradH)" opacity="0.1"/>
+    <circle cx="50" cy="48" r="12" fill="url(#emeraldGradH)" opacity="0.05"/>
+    <circle cx="50" cy="88" r="5.5" fill="url(#goldGradH)"/>
+    <circle cx="50" cy="88" r="8" fill="url(#goldGradH)" opacity="0.12"/>
+    <circle cx="50" cy="88" r="14" fill="url(#goldGradH)" opacity="0.05"/>
     <circle cx="50" cy="10" r="2" fill="url(#goldGradH)"/>
   </g>
-
-  <!-- TaxVolca text -->
   <text x="110" y="52" fill="currentColor" font-family="'Times New Roman', Georgia, Garamond, serif" font-size="34" font-weight="700" letter-spacing="2">TaxVolca</text>
-  <text x="110" y="52" fill="url(#goldGradH)" font-family="'Times New Roman', Georgia, Garamond, serif" font-size="34" font-weight="700" letter-spacing="2" opacity="0">
-    TaxVolca
-    <animate attributeName="opacity" values="0;1" dur="1.5s" fill="freeze"/>
-  </text>
-
-  <!-- Registered mark -->
   <text x="280" y="38" fill="url(#goldGradH)" font-family="'Times New Roman', Georgia, serif" font-size="14" font-weight="400">®</text>
-
-  <!-- Tagline -->
   <text x="110" y="80" fill="currentColor" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" letter-spacing="4" opacity="0.5">GLOBAL TAX, LEGAL &amp; BUSINESS ADVISORY</text>
 </svg>
