@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description: "Global Tax, Legal & Business Advisory",
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large" } },
-  icons: { icon: "/logo.svg" },
+  icons: { icon: "/favicon.svg", apple: "/logo-app.svg" },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

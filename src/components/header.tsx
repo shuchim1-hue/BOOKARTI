@@ -38,7 +38,7 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-3 group">
             <Image
-              src="/logo.svg"
+              src={theme === "dark" ? "/logo-icon.svg" : "/logo-icon-light.svg"}
               alt={brand.name}
               width={44}
               height={44}
