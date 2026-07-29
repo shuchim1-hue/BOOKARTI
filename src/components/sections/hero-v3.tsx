@@ -1,36 +1,21 @@
 "use client"
 
-import { useEffect, useRef } from "react"
-import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion"
-import { ArrowDown, ArrowRight, Globe, Play } from "lucide-react"
+import { motion, useScroll, useTransform } from "framer-motion"
+import { ArrowRight, Globe, Play } from "lucide-react"
 import Link from "next/link"
-import dynamic from "next/dynamic"
-
-const GlobeScene = dynamic(() => import("@/components/3d/globe-scene"), { ssr: false })
-
-function useMousePosition() {
-  const ref = useRef({ x: 0, y: 0 })
-  useEffect(() => {
-    const handle = (e: MouseEvent) => {
-      ref.current = { x: (e.clientX / window.innerWidth - 0.5) * 2, y: (e.clientY / window.innerHeight - 0.5) * 2 }
-    }
-    window.addEventListener("mousemove", handle)
-    return () => window.removeEventListener("mousemove", handle)
-  }, [])
-  return ref
-}
 
 export function HeroV3() {
   const { scrollYProgress } = useScroll()
   const opacity = useTransform(scrollYProgress, [0, 0.15], [1, 0])
   const scale = useTransform(scrollYProgress, [0, 0.15], [1, 0.95])
-  const mousePos = useMousePosition()
 
   return (
     <section className="relative h-screen min-h-[700px] overflow-hidden bg-[#020617]">
-      <GlobeScene />
-
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#020617] pointer-events-none" />
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url(/hero-bg.png)" }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#020617]/40 via-transparent to-[#020617] pointer-events-none" />
 
       <motion.div style={{ opacity, scale }} className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
         <motion.div

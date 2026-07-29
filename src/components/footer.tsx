@@ -41,7 +41,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <Image src="/logo-icon.svg" alt={brand.name} width={48} height={48} className="w-12 h-12" />
+              <Image src="/logo-raw.jpg" alt={brand.name} width={48} height={48} className="w-12 h-12 object-contain" />
               <div>
                 <h3 className="font-bold text-lg">{brand.name}</h3>
                 <p className="text-xs text-accent/80">{brand.tagline}</p>

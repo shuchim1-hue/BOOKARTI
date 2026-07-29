@@ -38,7 +38,7 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-3 group">
             <Image
-              src={theme === "dark" ? "/logo-icon.svg" : "/logo-icon-light.svg"}
+              src="/logo-raw.jpg"
               alt={brand.name}
               width={44}
               height={44}
@@ -63,7 +63,9 @@ export function Header() {
                   "px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200",
                   pathname === item.href
                     ? "text-accent bg-accent/10"
-                    : "text-foreground/80 hover:text-accent hover:bg-accent/5",
+                    : scrolled
+                      ? "text-foreground/80 hover:text-accent hover:bg-accent/5"
+                      : "text-white/80 hover:text-white hover:bg-white/10",
                 )}
               >
                 {item.label}
