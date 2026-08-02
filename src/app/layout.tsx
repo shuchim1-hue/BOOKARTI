@@ -1,70 +1,53 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import { Footer } from "@/components/footer"
-import { Header } from "@/components/header"
+import { DM_Sans, Playfair_Display } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
-import { WhatsAppButton } from "@/components/whatsapp-button"
 import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
+const sans = DM_Sans({ subsets: ["latin"], variable: "--font-sans" })
+const display = Playfair_Display({ subsets: ["latin"], variable: "--font-display" })
 
 export const metadata: Metadata = {
-  title: {
-    default: "TaxVolca | Global Tax, Legal & Business Advisory",
-    template: "%s | TaxVolca",
-  },
-  description: "AI-powered global tax, legal, audit, and business advisory platform. Serving clients across 25+ countries with enterprise-grade expertise and boutique attention.",
-  keywords: ["Tax", "Legal", "Audit", "Business Advisory", "AI Tax", "GST", "Company Registration", "International Tax", "Startup", "NRI", "India", "Australia"],
+    title: { default: "BookArti | Faith, made possible.", template: "%s | BookArti" },
+    description: "Book pujas, watch live temple darshan, connect with trusted pandits and make seva offerings from anywhere.",
+    keywords: ["online puja", "live darshan", "pandit booking", "temple seva", "BookArti"],
   openGraph: {
     type: "website",
     locale: "en_IN",
-    siteName: "TaxVolca",
-    title: "TaxVolca | Global Tax, Legal & Business Advisory",
-    description: "Where Compliance Meets Growth. AI-powered tax, legal, audit & corporate advisory platform.",
+      siteName: "BookArti",
+      title: "BookArti | Faith, made possible.",
+      description: "India's spiritual home, online.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "TaxVolca",
-    description: "Global Tax, Legal & Business Advisory",
+    title: "BookArti",
+    description: "Faith, made possible.",
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large" } },
-  icons: { icon: "/logo-raw.jpg" },
+  icons: { icon: "/favicon.ico" },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`} suppressHydrationWarning>
+    <html lang="en" className={`${sans.variable} ${display.variable} h-full antialiased`} suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "ProfessionalService",
-              name: "TaxVolca",
-              description: "Global Tax, Legal & Business Advisory",
-              url: "https://taxvolca.com",
-              email: "hello@taxvolca.com",
-              telephone: "+91-8146-252-252",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "#90, Dikshant School Road, VIP Road",
-                addressLocality: "Zirakpur",
-                addressRegion: "Punjab",
-                postalCode: "140603",
-                addressCountry: "IN",
-              },
-              areaServed: ["India", "Australia", "UAE", "Singapore", "United States", "United Kingdom", "Canada"],
+              "@type": "Organization",
+              name: "BookArti",
+              description: "Online puja bookings, live temple darshan and community seva.",
+              url: "https://bookarti.com",
+              areaServed: "IN",
+              sameAs: [],
             }),
           }}
         />
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <ThemeProvider>
-          <Header />
           <main className="flex-1">{children}</main>
-          <Footer />
-          <WhatsAppButton />
         </ThemeProvider>
       </body>
     </html>
